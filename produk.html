@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Produk - Farish2nd Shoes</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav>
+  <a href="index.html">Home</a>
+  <a href="produk.html">Produk</a>
+  <a href="keranjang.html" class="nav-cart">Keranjang</a>
+</nav>
+
+<div class="container">
+  <h2>Daftar Produk</h2>
+  <div id="produk-list" class="produk-grid"></div>
+</div>
+
+<script>
+  const produk = [
+    { kode: "SP01", nama: "Salomon", harga: 5000000, gambar: "download1.jpg" },
+    { kode: "SP02", nama: "Adidas Adizero", harga: 950000, gambar: "download2.webp" },
+    { kode: "SP03", nama: "Adidas Shanghai", harga: 850000, gambar: "download3.jpg" },
+    { kode: "SP04", nama: "Docmart DR. Martens", harga: 780000, gambar: "download4.jpg" },
+    { kode: "SP05", nama: "Vans old school", harga: 350000, gambar: "download2.jpg" },
+    { kode: "SP06", nama: "New balance", harga: 350000, gambar: "download5.jpg" }
+  ];
+
+  window.produk = produk;
+
+  function renderProduk() {
+    const list = document.getElementById("produk-list");
+
+    produk.forEach(p => {
+      list.innerHTML += `
+        <div class="card animate">
+          <img src="${p.gambar}">
+          <h3>${p.nama}</h3>
+          <p>Rp ${p.harga.toLocaleString()}</p>
+          <button onclick="addCart('${p.kode}')">Tambah ke Keranjang</button>
+        </div>
+      `;
+    });
+  }
+
+  renderProduk();
+</script>
+
+<script src="script.js"></script>
+
+</body>
+</html>

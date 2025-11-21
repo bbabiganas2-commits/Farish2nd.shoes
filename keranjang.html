@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Keranjang - Farish2nd Shoes</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav>
+  <a href="index.html">Home</a>
+  <a href="produk.html">Produk</a>
+  <a href="keranjang.html" class="nav-cart">Keranjang</a>
+</nav>
+
+<div class="cart-box animate">
+  <h2>Keranjang Belanja</h2>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Produk</th>
+        <th>Harga</th>
+        <th>Qty</th>
+        <th>Subtotal</th>
+        <th>Aksi</th>
+      </tr>
+    </thead>
+    <tbody id="cart-body"></tbody>
+  </table>
+
+  <h3>Total: <span id="total">Rp 0</span></h3>
+
+  <button class="checkout" onclick="bayar()">Lanjut Pembayaran</button>
+  <button class="whatsapp" onclick="kirimWhatsapp()">Pesan via WhatsApp</button>
+
+</div>
+
+<script src="script.js"></script>
+
+<script>
+function bayar() { alert("Fitur pembayaran belum dibuat 😊"); }
+</script>
+
+</body>
+</html>
